@@ -54,6 +54,16 @@ The widget appears in the bar. Move it with:
 omarchy bar move neno.power-watts --section right
 ```
 
+## Removing
+
+```bash
+# Remove the bar widget
+omarchy plugin remove neno.power-watts
+
+# Remove the monitor service (run from the cloned repo)
+sudo ./install.sh --uninstall
+```
+
 ## How it works
 
 - `omarchy-power-monitor.py` reads the RAPL `energy_uj` counters twice about a
@@ -85,7 +95,8 @@ Hyprland/Omarchy uses it.
 ```
 ├── BarWidget.qml            the bar widget (QML)
 ├── manifest.json            Omarchy plugin manifest
-├── install.sh               installs+enables the monitor service
+├── install.sh               installs/enables the monitor service (--uninstall removes it)
+├── LICENSE                  MIT
 └── monitor/
     ├── omarchy-power-monitor.py     root RAPL reader/publisher
     └── omarchy-power-monitor.service systemd unit
