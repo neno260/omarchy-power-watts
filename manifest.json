@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "neno.power-watts",
+  "name": "Power Watts",
+  "version": "1.0.0",
+  "author": "neno",
+  "description": "Live power consumption in watts from RAPL (requires omarchy-power-monitor.service)",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Power Watts",
+    "description": "Shows total power draw in watts",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
